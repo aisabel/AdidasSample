@@ -5,7 +5,7 @@
 <p align="justified">Create sample cucumber test for careers group page.</p>
 
 <h2>TestFramework Description:</h2>
-<p align="justified">Cucumber framework has been selected by their capability to display human readable instructions in the tests (gherking language); combined with Selenium to easy locate elements in a powerful faster headless browser, using JUnit for assertion results; getting as a result an automated report. </BR>This test suite is configured to be continuosly integrated in <a href="https://travis-ci.org/aisabel/AdidasSample">Travis</a></p>
+<p align="justified">Cucumber framework has been selected by their capability to display human readable instructions in the tests (gherking language); combined with Selenium to easy locate elements in a powerful faster headless browser, using JUnit for assertion results; getting as a result an automated report.</p>
 
 <h2>Specifications, Frameworks and IDE tools:</h2>
 <ul>
