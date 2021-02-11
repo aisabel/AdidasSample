@@ -1,4 +1,4 @@
-# AdidasSample
+# Adidas Sample
 [![Build Status](https://travis-ci.org/aisabel/AdidasSample.svg?branch=master)](https://travis-ci.org/aisabel/AdidasSample)
 
 <h2>Business Requirement:</h2>
