@@ -29,7 +29,7 @@
       <ul>
         <li> searchPositions.feature -> feature file with a simple position search in Adidas Careers website. </li>
         <li> theEndToEndScenario.feature --> feature file with a scenario where user applies for two positions </li>
-        <li> visaRequirements.feature --> an edge case where user applies for two positions but different constraints </li>
+        <li> visaRequirements.feature --> <b>an edge case</b> where user applies for two positions but different constraints </li>
       </ul>
      <li> src > test > java.stepDefinitions </li>
     <li> searchPositions.java </li>
@@ -49,9 +49,6 @@
   <p align="justified" >The quickest way of running Cucumber tests is by using the icons in the gutter next to the necessary feature or scenario. </br>
   <a href="https://www.jetbrains.com/help/idea/running-cucumber-tests.html"> View steps to run here</a></p>
  </ul>
- 
- <ul><li>Test can be also runned by console using maven with the following command: - mvn test -B</ili</ul>
-</ul>
 </ul>
 
 <h3>External references (more info)</h3>
