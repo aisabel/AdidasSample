@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,9 +25,10 @@ public class searchPositions {
     }
 
     @Given("user is in Careers Adidas Group")
-    public void user_is_in_Careers_Adidas_Group() throws PendingException {
+    public void user_is_in_Careers_Adidas_Group()throws Throwable {
         System.out.println(driver.getTitle());
     }
+
 
     @When("^search for \"([^\"]*)\" in \"([^\"]*)\"$")
     public void search(String position, String location)  {
@@ -44,7 +44,7 @@ public class searchPositions {
     }
 
     @Then("^results are displayed$")
-    public void results()   {
+    public void results() {
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         WebElement searchResult = driver.findElement(By.id("search-result__count-number"));
         int resultCount = Integer.parseInt(searchResult.getAttribute("data-count-to"));

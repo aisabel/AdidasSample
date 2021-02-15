@@ -1,11 +1,11 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/careersAdidasGroup.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/searchPositions.feature");
 formatter.feature({
-  "name": "search QA positions",
+  "name": "search QA positions in Careers Adidas Group",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "name": "search positions",
+  "name": "search QA positions",
   "description": "",
   "keyword": "Scenario Outline"
 });
@@ -51,7 +51,7 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "search positions",
+  "name": "search QA positions",
   "description": "",
   "keyword": "Scenario Outline"
 });
@@ -88,7 +88,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.scenario({
-  "name": "search positions",
+  "name": "search QA positions",
   "description": "",
   "keyword": "Scenario Outline"
 });
