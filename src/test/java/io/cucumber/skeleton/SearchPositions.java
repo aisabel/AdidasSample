@@ -1,4 +1,4 @@
-package stepDefinitions;
+package io.cucumber.skeleton;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -12,11 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 
-public class searchPositions {
+public class SearchPositions {
 
     public static WebDriver driver;
 
-    public searchPositions() {
+    public SearchPositions() {
         /*This inheritance class calls itself in order to use the browser and page set up across the whole test and deleting cookies first*/
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\irodriguez\\IdeaProjects\\AdidasSample\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
@@ -24,8 +24,8 @@ public class searchPositions {
         driver.get("https://careers.adidas-group.com/");
     }
 
-    @Given("user is in Careers Adidas Group")
-    public void user_is_in_Careers_Adidas_Group()throws Throwable {
+    @Given("^user is in Careers Adidas Group$")
+    public void user_is_in_Careers_Adidas_Group(){
         System.out.println(driver.getTitle());
     }
 

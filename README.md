@@ -13,7 +13,7 @@
 <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"> *Java with package (JDK 1.8)</a>Baseline Programming Language</li>
 <li>Main Frameworks:<ul>
   <li>*Cucumber framework 6.9.1</li>
-  <li>*Selenium for 3.141.59</a></li>
+  <li>*Selenium for 3.141.59</li>
   <li>*JUnit 4.13.1</li>
   <li>*Maven compiler 3.7.0</li>
   <p align="justified" >Note: Maven project will download automatically those framework external libraries based upon the dependencies in pom.xml file.</p>
@@ -25,19 +25,22 @@
 <p align="justified" >In order to provide a clear functional framework, the structure has been settup as below:</p>
 <p align="justified" >
   <ul>
-    <li> src > test > resources.features</li>
+    <li> src > test > resources > io.cucumber.skeleton</li>
       <ul>
         <li> searchPositions.feature -> feature file with a simple position search in Adidas Careers website. </li>
         <li> theEndToEndScenario.feature --> feature file with a scenario where user applies for two positions </li>
         <li> visaRequirements.feature --> <b>an edge case</b> where user applies for two positions but different constraints </li>
       </ul>
-     <li> src > test > java.stepDefinitions </li>
-    <li> searchPositions.java </li>
-    <li> Remark: other step definitions are not defined to not compromise logged in profiles and create defect applications in Adidas database </li>
+     <li> src > test > java > io.cucumber.skeleton</li>
+     <ul>
+        <li> SearchPositions.java </li>
+        <li> RunCucumberTest.java </li>
+        <li> Remark: other step definitions are not defined to not compromise logged in profiles and create defect applications in Adidas database </li>
+    </ul>
     </ul>
   </ul>
  </p>
- </ul>
+
   
 <h2>Install: How to run tests locally (Documentation steps in progress...)</h2>
 <ul>
