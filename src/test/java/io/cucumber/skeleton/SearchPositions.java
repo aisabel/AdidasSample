@@ -18,7 +18,7 @@ public class SearchPositions {
 
     public SearchPositions() {
         /*This inheritance class calls itself in order to use the browser and page set up across the whole test and deleting cookies first*/
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\irodriguez\\IdeaProjects\\AdidasSample\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
