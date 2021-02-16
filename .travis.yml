@@ -11,8 +11,7 @@ before_cache:
   - rm -f $HOME/.m2/repository/io/cucumber
  
 install:
-- mvn -N io.takari:maven:wrapper
-- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
   - mvn clean install
