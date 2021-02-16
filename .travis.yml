@@ -10,6 +10,9 @@ cache:
     
 before_cache:
   - rm -f $HOME/.m2/repository/io/cucumber
+  
+before_install:
+  - chmod +x mvnw
  
 install:
 - mvn -N io.takari:maven:wrapper
