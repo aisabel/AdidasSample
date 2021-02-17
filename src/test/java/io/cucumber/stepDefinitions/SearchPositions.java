@@ -52,13 +52,9 @@ public class SearchPositions {
 
 
     @When("^search for \"([^\"]*)\" in \"([^\"]*)\"$")
-    public void search(String position, String location) throws InterruptedException {
+    public void search(String position, String location) {
         driver.findElement(By.id("filterKeyword")).sendKeys(position);
         driver.findElement(By.id("filterLocation")).sendKeys(location);
-
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //driver.findElement(By.id("eac-container-filterLocation")).sendKeys(Keys.ENTER);
-        //driver.findElement(By.className("filterLocation")).sendKeys(Keys.ENTER);
 
         /*Enable below assertions when you enable chromeDriver, for htmlUnitDriver is not required
         //driver.findElement(By.id("eac-container-filterLocation")).click();
