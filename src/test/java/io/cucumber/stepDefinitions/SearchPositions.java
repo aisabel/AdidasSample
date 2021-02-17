@@ -29,7 +29,7 @@ public class SearchPositions {
     }
 */
     /*Currently enabled code is to use htmlUnit driver*/
-    public static WebDriver driver;
+    public  WebDriver driver;
     public SearchPositions() {
 
         // turn off htmlunit warnings
