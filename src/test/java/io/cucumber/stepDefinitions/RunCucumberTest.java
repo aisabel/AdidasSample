@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        // publish = true
         features = "classpath:io/cucumber/features/searchPositions.feature",
-        plugin = {"pretty", "summary", "html:target/cucumber-report.html"}, publish = true)
+        plugin = {"pretty", "summary", "html:target/cucumber-report.html"})
 public class RunCucumberTest {
 }
