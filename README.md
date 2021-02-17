@@ -25,13 +25,13 @@
 <p align="justified" >In order to provide a clear functional framework, the structure has been settup as below:</p>
 <p align="justified" >
   <ul>
-    <li> src > test > resources > io.cucumber.skeleton</li>
+    <li> src > test > resources > io.cucumber.stepDefinitions</li>
       <ul>
         <li> searchPositions.feature -> feature file with a simple position search in Adidas Careers website. </li>
         <li> theEndToEndScenario.feature --> feature file with a scenario where user applies for two positions </li>
         <li> visaRequirements.feature --> <b>an edge case</b> where user applies for two positions but different constraints </li>
       </ul>
-     <li> src > test > java > io.cucumber.skeleton</li>
+     <li> src > test > java > io.cucumber.stepDefinitions</li>
      <ul>
         <li> SearchPositions.java </li>
         <li> RunCucumberTest.java </li>
@@ -58,5 +58,7 @@
 <ul>
   <li><a href="http://docs.seleniumhq.org/projects/webdriver/">Selenium reference page</a></li>
   <li><a href="https://cucumber.io">Cucumber reference page</a></li>
-   <li><a href="https://www.jetbrains.com/help/idea/cucumber-support.html">Intelij idea cucumber support</a></li>
+  <li> <a href="https://cucumber.io/blog/open-source/cucumber-reports/">Cucumber reports</a></li>
+  <li><a href="https://www.jetbrains.com/help/idea/cucumber-support.html">Intelij idea cucumber support</a></li>
+   
 </ul>
