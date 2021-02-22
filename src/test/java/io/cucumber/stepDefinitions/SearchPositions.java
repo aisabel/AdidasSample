@@ -21,15 +21,15 @@ public class SearchPositions {
     public static WebDriver driver;
 
     public SearchPositions() {
-        //This inheritance class calls itself in order to use the browser and page set up across the whole test and deleting cookies first
+        //Replace path to chromeDriver if necesary
         System.setProperty("webdriver.chrome.driver", "chromedriver_win32/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
-    }
-*/
+    }*/
+
     /*Currently enabled code is to use htmlUnit driver*/
-    public  WebDriver driver;
+    public WebDriver driver;
     public SearchPositions() {
 
         // turn off htmlunit warnings
@@ -55,6 +55,9 @@ public class SearchPositions {
     public void search(String position, String location) {
         driver.findElement(By.id("filterKeyword")).sendKeys(position);
         driver.findElement(By.id("filterLocation")).sendKeys(location);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //driver.findElement(By.id("filterLocation")).sendKeys(Keys.ARROW_DOWN);
+        //driver.findElement(By.id("filterLocation")).sendKeys(Keys.ENTER);
 
         /*Enable below assertions when you enable chromeDriver, for htmlUnitDriver is not required
         //driver.findElement(By.id("eac-container-filterLocation")).click();
