@@ -6,8 +6,6 @@ jdk:
 addons:
       chrome: stable
 
-
-
 cache:
   directories:
     - $HOME/.m2
@@ -18,8 +16,7 @@ before_cache:
 before_install:
   # start your web application and listen on `localhost`
   - chmod +x chromedriver_win32/chromedriver.exe
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-  ⋮
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 
 
 install:
   - mvn -N io.takari:maven:wrapper
