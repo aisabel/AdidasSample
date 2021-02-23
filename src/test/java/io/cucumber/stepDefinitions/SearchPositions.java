@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 
@@ -27,9 +26,8 @@ public class SearchPositions {
         //System.setProperty("webdriver.chrome.driver", "chromedriver_win32/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("prefs", chromePrefs);
         options.addArguments("--no-sandbox");
-        options.addArguments("--headless"); 
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
