@@ -16,9 +16,9 @@ before_cache:
 before_install:
  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   ⋮
- - sudo chmod +x /chromedriver_win32/
-
+  
 install:
+  - chmod +x /chromedriver_win32/
   - mvn -N io.takari:maven:wrapper
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
