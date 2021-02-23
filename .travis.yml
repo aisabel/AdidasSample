@@ -16,17 +16,19 @@ before_cache:
 
 before_install:
    #- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:3000/
-   - CHROME_MAIN_VERSION=`google-chrome-stable --version | sed -E 's/(^Google Chrome |\.[0-9]+ )//g'`
-     - CHROMEDRIVER_VERSION=`curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAIN_VERSION"`
-     - curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O
-     #- unzip chromedriver_linux64.zip -d ~/bin
-   - unzip chromedriver_linux64.zip -d ~/
-    - rm ~/chromedriver_linux64.zip
-       - sudo mv -f ~/chromedriver /usr/local/share/
-       - sudo chmod +x /usr/local/share/chromedriver
-       - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+
 
 install:
+  - CHROME_MAIN_VERSION=`google-chrome-stable --version | sed -E 's/(^Google Chrome |\.[0-9]+ )//g'`
+      - CHROMEDRIVER_VERSION=`curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAIN_VERSION"`
+      - curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O
+    #- unzip chromedriver_linux64.zip -d ~/bin
+    - unzip chromedriver_linux64.zip -d ~/
+      - rm ~/chromedriver_linux64.zip
+      - sudo mv -f ~/chromedriver /usr/local/share/
+      - sudo chmod +x /usr/local/share/chromedriver
+      - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+
   - mvn -N io.takari:maven:wrapper
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
