@@ -23,8 +23,12 @@ public class SearchPositions {
     public SearchPositions() {
         //Replace path to chromeDriver if necesary
         //System.setProperty("webdriver.chrome.driver", "chromedriver_win32/chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver/chromedriver.exe");
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", chromePrefs);
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless"); 
+        driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
     }
