@@ -2,10 +2,8 @@ language: java
 jdk:
   - oraclejdk8
 dist: trusty
-
 addons:
       chrome: stable
-
 cache:
   directories:
     - $HOME/.m2
@@ -22,7 +20,7 @@ install:
   - CHROMEDRIVER_VERSION=`curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAIN_VERSION"`
   - curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O
   - unzip chromedriver_linux64.zip -d ~/bin
-
+  
 script:
   - mvn clean install
   - mvn test -B
