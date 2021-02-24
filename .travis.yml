@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - oraclejdk11
+  - oraclejdk8
 dist: xenial
 sudo: required
 addons:
