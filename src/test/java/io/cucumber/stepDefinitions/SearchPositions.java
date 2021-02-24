@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SearchPositions {
 
-    /*Enable below code, and commented import class - if you wish to use chromeDriver instead*/
+    /*Enable below code, and commented import class - if you wish to use chromeDriver instead
     public static WebDriver driver;
 
     public SearchPositions() {
@@ -32,9 +32,9 @@ public class SearchPositions {
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
-    }
+    }*/
 
-    /*Currently enabled code is to use htmlUnit driver
+    /*Currently enabled code is to use htmlUnit driver*/
     public WebDriver driver;
     public SearchPositions() {
 
@@ -48,7 +48,7 @@ public class SearchPositions {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://careers.adidas-group.com/");
         System.out.println("Page title is: " + driver.getTitle());
-    }*/
+    }
 
 
     @Given("^user is in Careers Adidas Group$")
