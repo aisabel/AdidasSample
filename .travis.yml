@@ -1,7 +1,7 @@
 language: java
 jdk:
   - oraclejdk8
-dist: xenial
+dist: trusty
 sudo: required
 addons:
       chrome: stable
@@ -15,7 +15,7 @@ before_cache:
   
 install:
   - mvn -N io.takari:maven:wrapper
-  - pip install webdriver-manager
+  - install webdriver-manager
   - wget -N https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
   - rm ~/chromedriver_linux64.zip
