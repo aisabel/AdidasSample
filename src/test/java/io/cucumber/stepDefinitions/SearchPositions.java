@@ -28,6 +28,7 @@ public class SearchPositions {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--window-size=1920x1080");
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
