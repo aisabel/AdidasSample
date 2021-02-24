@@ -28,7 +28,7 @@ public class SearchPositions {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        options.addArguments("window-size=1920x1080");
+        options.addArguments("--window-size=1920x1080");
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
@@ -59,6 +59,7 @@ public class SearchPositions {
 
     @When("^search for \"([^\"]*)\" in \"([^\"]*)\"$")
     public void search(String position, String location) {
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         driver.findElement(By.id("filterKeyword")).sendKeys(position);
         driver.findElement(By.id("filterLocation")).sendKeys(location);
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
