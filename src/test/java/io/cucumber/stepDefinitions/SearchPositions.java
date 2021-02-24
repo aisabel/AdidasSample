@@ -28,7 +28,7 @@ public class SearchPositions {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        options.add_argument('window-size=1920x1080');
+        options.addArguments("window-size=1920x1080");
         driver = new ChromeDriver(options);
         driver.manage().deleteAllCookies();
         driver.get("https://careers.adidas-group.com/");
