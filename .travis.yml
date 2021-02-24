@@ -14,14 +14,15 @@ before_cache:
   - rm -f $HOME/.m2/repository/io/cucumber
   
 install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+before_script:
   - wget -N https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
   - rm ~/chromedriver_linux64.zip
   - sudo mv -f ~/chromedriver /usr/local/share/
   - sudo chmod +x /usr/local/share/chromedriver
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
   - mvn clean install
